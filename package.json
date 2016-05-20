@@ -38,6 +38,7 @@
     "run-sequence": "^1.1.0"
   },
   "devDependencies": {
+    "babel-jest": "^12.0.2",
     "browser-sync": "^2.7.1",
     "gulp": "^3.8.11",
     "react-tools": "^0.13.3"
