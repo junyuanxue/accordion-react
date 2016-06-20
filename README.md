@@ -4,7 +4,7 @@
 
 Learning how to test-drive a React component following [this tutorial](http://www.undefinednull.com/2015/05/03/react-tdd-example-unit-testing-and-building-a-react-component-with-jest-gulp-and-react-test-utils/).
 
-The highlight would be the Game of Thrones episode guide in my hardcoded sample text:
+The highlight would be the (hardcoded! gasp) Game of Thrones episode guide as sample text:
 
 ![Imgur](http://i.imgur.com/q6bghYp.png)
 
