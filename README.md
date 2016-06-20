@@ -1,34 +1,19 @@
-# ReactJS + JEST + GULP + JSPM - Seed
+# Accordion Component
 
-Seed project for writing ReactJS components in TDD fashion. This seed uses Jest for unit testing, Gulp for building and JSPM as the browser package manager.
+## About :musical_score:
 
-**Note:** We use System.js ( comes with JSPM ) for module loading.
+Learning how to test-drive a React component following [this tutorial](http://www.undefinednull.com/2015/05/03/react-tdd-example-unit-testing-and-building-a-react-component-with-jest-gulp-and-react-test-utils/).
 
-## Install
+The highlight would be the Game of Thrones episode guide in my hardcoded sample text.
 
-Clone this repo and run npm install
-```
-git clone git@github.com:shidhincr/react-jest-gulp-jspm-seed.git
+## Tools :wrench:
+* React
+* Jest
+* TestUtils
 
-npm install
-```
+## Author :cat:
+Junyuan Xue
 
-## Usage 
-
-There are two main gulp tasks. Run both tasks in two different terminal tabs, so that you can develop the component in TDD way.
-
-**Develop**
-
-```js 
-gulp develop
-```
-
-This task will open the browser ( using BrowserSync ) and load the `index.html`. It will then wait for any changes in the scripts folder, and reload the browser.
-
-**Test**
-
-```js 
-gulp test
-```
-
-This task runs the unit tests using `jest`. It will also wait for any changes in the `__tests__` or `scripts` folder to re-run the tests.
+[Github](https://github.com/junyuanxue)
+| [CV](https://github.com/junyuanxue/cv)
+| [Blog](https://spinningcodes.wordpress.com)
