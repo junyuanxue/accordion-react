@@ -11,4 +11,4 @@ var input = [{
   content: 'Content belongs to title 2'
 }];
 
-ReactDOM.render(<Accordion/>, document.getElementById('view'));
+ReactDOM.render(<Accordion data={input} />, document.getElementById('view'));
