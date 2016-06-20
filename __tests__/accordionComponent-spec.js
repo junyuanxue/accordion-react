@@ -19,10 +19,12 @@ describe('Accordion', function () {
   it('builds the layout from an array of objects passed as prop', function () {
     var input = [{
       name: 'Title 1',
-      content: 'Content belongs to title 1'
+      content: 'Content belongs to title 1',
+      showOnLoad: true
     }, {
       name: 'Title 2',
-      content: 'Content belongs to title 2'
+      content: 'Content belongs to title 2',
+      showOnLoad: true
     }];
 
     var accordion = TestUtils.renderIntoDocument( <Accordion data={input} /> );
@@ -39,5 +41,22 @@ describe('Accordion', function () {
     expect(contents[1].textContent).toEqual('Content belongs to title 2');
   });
 
+  it('should hide all the contents by default unless specified by a flag', function () {
+    var input = [{
+      name: 'Title 1',
+      content: 'Content belongs to title 1',
+      showOnLoad: false
+    }, {
+      name: 'Title 2',
+      content: 'Content belongs to title 2',
+      showOnLoad: true
+    }];
+
+    var accordion = TestUtils.renderIntoDocument( <Accordion data={input} /> );
+    var contents = TestUtils.scryRenderedDOMComponentsWithClass(accordion, 'accordion-content');
+
+    expect(contents.length).toEqual(1);
+    expect(contents[0].textContent).toEqual('Content belongs to title 2');
+  });
 
 });

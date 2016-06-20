@@ -7,15 +7,21 @@ var Accordion = React.createClass({
     var panes = [];
     var data = this.props.data || [];
 
+    var getContent = function (item) {
+      return !item.showOnLoad ? '' : (
+        <div className="accordion-content">
+          {item.content}
+        </div>
+      );
+    };
+
     data.forEach(function (item, index) {
       panes.push(
         <div key={index}>
           <div className="accordion-header">
             {item.name}
           </div>
-          <div className="accordion-content">
-            {item.content}
-          </div>
+          { getContent(item) }
         </div>
       );
     });

@@ -8,7 +8,8 @@ var input = [{
   content: 'Content belongs to title 1'
 }, {
   name: 'Title 2',
-  content: 'Content belongs to title 2'
+  content: 'Content belongs to title 2',
+  showOnLoad: true
 }];
 
 ReactDOM.render(<Accordion data={input} />, document.getElementById('view'));
