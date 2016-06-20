@@ -27,7 +27,7 @@ describe('Accordion', function () {
       showOnLoad: true
     }];
 
-    var accordion = TestUtils.renderIntoDocument( <Accordion data={input} /> );
+    var accordion = TestUtils.renderIntoDocument( <Accordion items={input} /> );
     var headers = TestUtils.scryRenderedDOMComponentsWithClass(accordion, 'accordion-header');
     var contents = TestUtils.scryRenderedDOMComponentsWithClass(accordion, 'accordion-content');
 
@@ -52,7 +52,7 @@ describe('Accordion', function () {
       showOnLoad: true
     }];
 
-    var accordion = TestUtils.renderIntoDocument( <Accordion data={input} /> );
+    var accordion = TestUtils.renderIntoDocument( <Accordion items={input} /> );
     var contents = TestUtils.scryRenderedDOMComponentsWithClass(accordion, 'accordion-content');
 
     expect(contents.length).toEqual(1);
@@ -68,19 +68,19 @@ describe('Accordion', function () {
       content: 'Content belongs to title 2'
     }];
 
-    var accordion = TestUtils.renderIntoDocument( <Accordion data={input} /> );
+    var accordion = TestUtils.renderIntoDocument( <Accordion items={input} /> );
     var headers = TestUtils.scryRenderedDOMComponentsWithClass(accordion, 'accordion-header');
     var contents = TestUtils.scryRenderedDOMComponentsWithClass(accordion, 'accordion-content');
 
     expect(contents.length).toEqual(0);
 
-    TestUtils.simulate.click(headers[0]);
+    TestUtils.Simulate.click(headers[0]);
     contents = TestUtils.scryRenderedDOMComponentsWithClass(accordion, 'accordion-content');
 
     expect(contents.length).toEqual(1);
     expect(contents[0].textContent).toEqual('Content belongs to title 1');
 
-    TestUtils.simulate.click(headers[0]);
+    TestUtils.Simulate.click(headers[0]);
     contents = TestUtils.scryRenderedDOMComponentsWithClass(accordion, 'accordion-content');
 
     expect(contents.length).toEqual(0);

@@ -3,13 +3,16 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Accordion = require('components/accordionComponent');
-var input = [{
-  name: 'Title 1',
-  content: 'Content belongs to title 1'
+
+var sampleText = [{
+  name: 'The Red Woman',
+  content: 'The fate of Jon Snow is revealed. Daenerys is brought before Khal Moro. Tyrion gets used to living in Meereen. Ramsay sends his dogs after Theon and Sansa. Ellaria and the Sand Snakes make their move. Cersei mourns for Myrcella.'
 }, {
-  name: 'Title 2',
-  content: 'Content belongs to title 2',
-  showOnLoad: true
+  name: 'Home',
+  content: 'Bran trains with the Three-Eyed Raven. Tommen meets with Cersei. Tyrion makes a bold move. Theon leaves while at Pyke new issues arise. Ramsay\'s brother is born. Davos asks Melisandre for a miracle.'
+}, {
+  name: 'Oathbreaker',
+  content: 'Daenerys arrives at Vaes Dothrak. Sam and Gilly sail for Horn Hill. Arya trains as No One. Varys finds information on the Sons of the Harpy. Ramsay receives a gift. Tommen meets with the High Sparrow. At Castle Black, a miracle occurs.'
 }];
 
-ReactDOM.render(<Accordion data={input} />, document.getElementById('view'));
+ReactDOM.render(<Accordion items={sampleText} />, document.getElementById('view'));
