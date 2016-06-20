@@ -13,6 +13,9 @@ var sampleText = [{
 }, {
   name: 'Oathbreaker',
   content: 'Daenerys arrives at Vaes Dothrak. Sam and Gilly sail for Horn Hill. Arya trains as No One. Varys finds information on the Sons of the Harpy. Ramsay receives a gift. Tommen meets with the High Sparrow. At Castle Black, a miracle occurs.'
+}, {
+  name: 'Book of the Stranger',
+  content: 'Sansa arrives at Castle Black. Tyrion makes a deal with the Slave Masters. Jorah and Daario sneak into Vaes Dothrak. Ramsay sends a letter to Jon. Theon arrives at Pyke. Cersei and Olenna Tyrell plot against the High Sparrow.'
 }];
 
 ReactDOM.render(<Accordion items={sampleText} />, document.getElementById('view'));

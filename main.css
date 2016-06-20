@@ -1,0 +1,17 @@
+body {
+  font-family: sans-serif;
+  font-weight: 100;
+  background-image: url('http://gameofthroneswiki.info/wp-content/uploads/2014/09/game-of-thrones-background.jpg');
+  color: #fff;
+}
+
+h2 {
+  cursor: pointer;
+  border-bottom: 2px dotted #fff;
+}
+
+.accordion {
+  margin-left: 15%;
+  margin-top: 10%;
+  width: 65%
+}
