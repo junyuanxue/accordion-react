@@ -59,4 +59,31 @@ describe('Accordion', function () {
     expect(contents[0].textContent).toEqual('Content belongs to title 2');
   });
 
+  it('should be able to toggle the content by clicking on the respective title', function () {
+    var input = [{
+      name: 'Title 1',
+      content: 'Content belongs to title 1'
+    }, {
+      name: 'Title 2',
+      content: 'Content belongs to title 2'
+    }];
+
+    var accordion = TestUtils.renderIntoDocument( <Accordion data={input} /> );
+    var headers = TestUtils.scryRenderedDOMComponentsWithClass(accordion, 'accordion-header');
+    var contents = TestUtils.scryRenderedDOMComponentsWithClass(accordion, 'accordion-content');
+
+    expect(contents.length).toEqual(0);
+
+    TestUtils.simulate.click(headers[0]);
+    contents = TestUtils.scryRenderedDOMComponentsWithClass(accordion, 'accordion-content');
+
+    expect(contents.length).toEqual(1);
+    expect(contents[0].textContent).toEqual('Content belongs to title 1');
+
+    TestUtils.simulate.click(headers[0]);
+    contents = TestUtils.scryRenderedDOMComponentsWithClass(accordion, 'accordion-content');
+
+    expect(contents.length).toEqual(0);
+  });
+
 });
